@@ -43,12 +43,12 @@ public class RandomLinkToSites extends HttpServlet {
             out.println("<title>Servlet RandomLinkToSites</title>");  
             out.println("</head>");
             out.println("<body>");
-            int siteIndex = Math.abs(random.nextInt()) % sites.size();
+            response.setHeader("Refresh", "45");
+    int siteIndex = Math.abs(random.nextInt()) % sites.size();
     String site = (String)sites.elementAt(siteIndex);
     response.setStatus(response.SC_MOVED_TEMPORARILY);
     response.setHeader("Location", site);
-    response.setHeader("Refresh", "120");
-            //out.println("<h1>Servlet RandomLinkToSites at " + request.getContextPath () + "</h1>");
+    //out.println("<h1>Servlet RandomLinkToSites at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
             } finally { 
