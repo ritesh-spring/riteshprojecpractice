@@ -47,6 +47,7 @@ public class RandomLinkToSites extends HttpServlet {
     String site = (String)sites.elementAt(siteIndex);
     response.setStatus(response.SC_MOVED_TEMPORARILY);
     response.setHeader("Location", site);
+    response.setHeader("Refresh", "120");
             //out.println("<h1>Servlet RandomLinkToSites at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
