@@ -35,10 +35,13 @@ public class TimeRefeshInTenSecond extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet TimeRefeshInTenSecond</title>");  
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body bgcolor=blue>");
+            out.println("<font size=7 color=red>");
+            out.println("Time Will be Refreshed in Every 10 SEC:<br>");
             response.setHeader("Refresh", "10");
             out.println(new Date().toString());
           //out.println("<h1>Servlet TimeRefeshInTenSecond at " + request.getContextPath () + "</h1>");
+            out.println("</font>");
             out.println("</body>");
             out.println("</html>");
             } finally {
