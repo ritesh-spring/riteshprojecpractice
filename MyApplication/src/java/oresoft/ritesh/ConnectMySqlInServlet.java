@@ -34,7 +34,7 @@ public class ConnectMySqlInServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException, ClassNotFoundException, SQLException {
-        response.setContentType("text/html;charset=UTF-8");
+        //response.setContentType("text/html;charset=UTF-8;text/css");
         PrintWriter out = response.getWriter();
         Connection connection = null;
     Statement stmt = null;
@@ -51,22 +51,23 @@ public class ConnectMySqlInServlet extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet ConnectMySqlInServlet</title>");  
             out.println("</head>");
-            out.println("<body bgcolor=blue>");
-            out.println("<font color=red size=7>");
-            out.println("Regd.No"+"  "+"Name"+"  "+"Branch"+"<br>");
+            //out.println("<font size=5 color=red>");
+            out.println("<body>");
+            out.println("<table border=1 width=50% valign=top align=left cellpadding=6 fontcolor=red>");
+            out.println("<tr align=left><font size=6 color=green><th>Regd.No</th><th>Name</th><th>Branch</th></tr></font>");
             while(rs.next())
             {
                 int x=rs.getInt(1);
-                out.println(x+"  ");
+                out.println("<tr><font size=5 color=red><td>"+x+"</td>");
                 String str1=rs.getString(2);
-                out.println(str1+"  ");
+                out.println("<td>"+str1+"</td>");
                 String str2=rs.getString(3);
-                out.println(str2);
-                out.println("<br>");
+                out.println("<td>"+str2+"</td></font></tr>");
             }
-            //out.println("<h1>Servlet ConnectMySqlInServlet at " + request.getContextPath () + "</h1>");
-            out.println("</font>");
+           // out.println("<h1>Servlet ConnectMySqlInServlet at " + request.getContextPath () + "</h1>");
+            out.println("</table>");
             out.println("</body>");
+            //out.println("</font>");
             out.println("</html>");
         } finally { 
             out.close();
