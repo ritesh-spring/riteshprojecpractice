@@ -7,6 +7,7 @@ package oresoft.ritesh;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 
 /**
  *
@@ -29,11 +30,24 @@ public class MySqlConnectivityDemo {
 
             // Get a connection to database.
             connection = DriverManager.getConnection(url, username, password);
+            
+            java.sql.Statement stmt=connection.createStatement();
+            ResultSet rs=stmt.executeQuery("select * from student");
+            while(rs.next())
+            {
+                int x=rs.getInt(1);
+                String str1=rs.getString(2);
+                String str2=rs.getString(3);
+                out.println(x+" "+str1+" "+str2);
+            }
+
+            //connection.close();
         }
         catch(Exception e)
         {
             e.printStackTrace();
+      System.err.println("Exception: " + e.getMessage());
         }
-
-}
+ //connection.close();
+       }
 }
