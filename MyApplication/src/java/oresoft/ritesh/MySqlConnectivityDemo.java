@@ -38,7 +38,7 @@ public class MySqlConnectivityDemo {
                 int x=rs.getInt(1);
                 String str1=rs.getString(2);
                 String str2=rs.getString(3);
-                out.println(x+" "+str1+" "+str2);
+                System.out.println(x+" "+str1+" "+str2);
             }
 
             //connection.close();

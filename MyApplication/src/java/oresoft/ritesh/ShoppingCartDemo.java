@@ -7,23 +7,18 @@ package oresoft.ritesh;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
-import org.apache.commons.fileupload.DiskFileUpload;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.FileUpload;
-import org.apache.commons.fileupload.FileUploadException;
+import javax.servlet.http.HttpSession;
+
 /**
  *
  * @author Ritesh Kumar
  */
-public class FileUploadDemo extends HttpServlet {
+public class ShoppingCartDemo extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -36,25 +31,30 @@ public class FileUploadDemo extends HttpServlet {
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession(true);
+        Enumeration enm = request.getParameterNames();
+        String[] items = (String[])session.getValue("cart.items");
         try {
-           FileUpload fup=new FileUpload();
-           boolean isMultipart=FileUpload.isMultipartContent(request);
-           DiskFileUpload upload=new DiskFileUpload();
-           List items=upload.parseRequest(request);
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet FileUploadDemo</title>");  
+            out.println("<title>Servlet ShoppingCartDemo</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet FileUploadDemo at " + request.getContextPath () + "</h1>");
+            //out.println("<h1>Servlet ShoppingCartDemo at " + request.getContextPath () + "</h1>");
+            out.println("You currently have the following items in your cart:<BR>");
+    if (items == null) {
+      out.println("<B>None</B>");
+    }
+    else {
+      out.println("<UL>");
+      for (int i = 0; i < items.length; i++) {
+        out.println("<LI>" + items[i]);
+      }
+      out.println("</UL>");
             out.println("</body>");
             out.println("</html>");
-           
-        } catch (FileUploadException fue)  {
-          
-            fue.printStackTrace();
         }
-        finally {
+      }   finally {
             out.close();
         }
     } 

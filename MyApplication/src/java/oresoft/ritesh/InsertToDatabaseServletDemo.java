@@ -11,19 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
-import org.apache.commons.fileupload.DiskFileUpload;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.FileUpload;
-import org.apache.commons.fileupload.FileUploadException;
+
 /**
  *
  * @author Ritesh Kumar
  */
-public class FileUploadDemo extends HttpServlet {
+public class InsertToDatabaseServletDemo extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -37,24 +30,17 @@ public class FileUploadDemo extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-           FileUpload fup=new FileUpload();
-           boolean isMultipart=FileUpload.isMultipartContent(request);
-           DiskFileUpload upload=new DiskFileUpload();
-           List items=upload.parseRequest(request);
+            /* TODO output your page here
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet FileUploadDemo</title>");  
+            out.println("<title>Servlet InsertToDatabaseServletDemo</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet FileUploadDemo at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet InsertToDatabaseServletDemo at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
-           
-        } catch (FileUploadException fue)  {
-          
-            fue.printStackTrace();
-        }
-        finally {
+            */
+        } finally { 
             out.close();
         }
     } 

@@ -34,7 +34,7 @@ public class ConnectMySqlInServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException, ClassNotFoundException, SQLException {
-        //response.setContentType("text/html;charset=UTF-8;text/css");
+        response.setContentType("text/html;charset=UTF-8;");
         PrintWriter out = response.getWriter();
         Connection connection = null;
     Statement stmt = null;
@@ -51,23 +51,26 @@ public class ConnectMySqlInServlet extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet ConnectMySqlInServlet</title>");  
             out.println("</head>");
-            //out.println("<font size=5 color=red>");
-            out.println("<body>");
-            out.println("<table border=1 width=50% valign=top align=left cellpadding=6 fontcolor=red>");
-            out.println("<tr align=left><font size=6 color=green><th>Regd.No</th><th>Name</th><th>Branch</th></tr></font>");
+            out.println("<font size=10 color=red>");
+            out.println("<body text=red bgcolor=blue>");
+            out.println("<table border=1 width=50% valign=top align=center cellpadding=6 fontcolor=red>");
+            out.println("<caption align=bottom>Student Table</caption>");
+            out.println("<tr align=left><font size=10 color=blue><th>Regd.No</th><th>Name</th><th>Branch</th><th>CGPA</th></font></tr>");
             while(rs.next())
             {
                 int x=rs.getInt(1);
-                out.println("<tr><font size=5 color=red><td>"+x+"</td>");
+                out.println("<tr><font size=10 color=red><td>"+x+"</td>");
                 String str1=rs.getString(2);
                 out.println("<td>"+str1+"</td>");
                 String str2=rs.getString(3);
-                out.println("<td>"+str2+"</td></font></tr>");
+                out.println("<td>"+str2+"</td>");
+                String str3=rs.getString(4);
+                out.println("<td>"+str3+"</td></font></tr>");
             }
-           // out.println("<h1>Servlet ConnectMySqlInServlet at " + request.getContextPath () + "</h1>");
+           //out.println("<h1>Servlet ConnectMySqlInServlet at " + request.getContextPath () + "</h1>");
             out.println("</table>");
             out.println("</body>");
-            //out.println("</font>");
+            out.println("</font>");
             out.println("</html>");
         } finally { 
             out.close();

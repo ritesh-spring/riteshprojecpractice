@@ -8,6 +8,46 @@
         <servlet-name>RandomLinkToSites</servlet-name>
         <servlet-class>oresoft.ritesh.RandomLinkToSites</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TimeRefeshInTenSecond</servlet-name>
+        <servlet-class>oresoft.ritesh.TimeRefeshInTenSecond</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PrintHeaderInformation</servlet-name>
+        <servlet-class>oresoft.ritesh.PrintHeaderInformation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PrintingParameterNameAndValue</servlet-name>
+        <servlet-class>oresoft.ritesh.PrintingParameterNameAndValue</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NoOfTimesServletVisitedDemo</servlet-name>
+        <servlet-class>oresoft.ritesh.NoOfTimesServletVisitedDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShoppingCartDemo</servlet-name>
+        <servlet-class>oresoft.ritesh.ShoppingCartDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RocketLauncherWithServerPull</servlet-name>
+        <servlet-class>oresoft.ritesh.RocketLauncherWithServerPull</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MySqlConnectivityDemo</servlet-name>
+        <servlet-class>oresoft.ritesh.MySqlConnectivityDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MysqlConnectServletDemo</servlet-name>
+        <servlet-class>oresoft.ritesh.MysqlConnectServletDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConnectMySqlInServlet</servlet-name>
+        <servlet-class>oresoft.ritesh.ConnectMySqlInServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsertToDatabaseServletDemo</servlet-name>
+        <servlet-class>oresoft.ritesh.InsertToDatabaseServletDemo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FileUploadDemo</servlet-name>
         <url-pattern>/FileUploadDemo</url-pattern>
@@ -15,6 +55,46 @@
     <servlet-mapping>
         <servlet-name>RandomLinkToSites</servlet-name>
         <url-pattern>/RandomLinkToSites</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimeRefeshInTenSecond</servlet-name>
+        <url-pattern>/TimeRefeshInTenSecond</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrintHeaderInformation</servlet-name>
+        <url-pattern>/PrintHeaderInformation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrintingParameterNameAndValue</servlet-name>
+        <url-pattern>/PrintingParameterNameAndValue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NoOfTimesServletVisitedDemo</servlet-name>
+        <url-pattern>/NoOfTimesServletVisitedDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShoppingCartDemo</servlet-name>
+        <url-pattern>/ShoppingCartDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RocketLauncherWithServerPull</servlet-name>
+        <url-pattern>/RocketLauncherWithServerPull</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MySqlConnectivityDemo</servlet-name>
+        <url-pattern>/MySqlConnectivityDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MysqlConnectServletDemo</servlet-name>
+        <url-pattern>/MysqlConnectServletDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConnectMySqlInServlet</servlet-name>
+        <url-pattern>/ConnectMySqlInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsertToDatabaseServletDemo</servlet-name>
+        <url-pattern>/InsertToDatabaseServletDemo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

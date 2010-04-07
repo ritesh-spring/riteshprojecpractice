@@ -21,7 +21,7 @@ import javax.servlet.ServletOutputStream;
  * @author Ritesh Kumar
  */
 public class RocketLauncherWithServerPull extends HttpServlet {
-   static final String LAUNCH = "d:\\ritesh.gif";
+   static final String LAUNCH = "ritesh.gif";
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
