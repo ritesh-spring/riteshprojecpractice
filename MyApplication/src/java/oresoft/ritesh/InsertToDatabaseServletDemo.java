@@ -47,7 +47,7 @@ public class InsertToDatabaseServletDemo extends HttpServlet {
     String str4=request.getParameter("cg");
         try
         {
-         try{
+
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost/test";
             String username = "root";
@@ -61,16 +61,13 @@ public class InsertToDatabaseServletDemo extends HttpServlet {
             pstmt.setString(3, str3);
             pstmt.setFloat(4, y);
             pstmt.executeUpdate();
-            connection.close();
-         }
-         catch(Exception e)
-         {e.printStackTrace();}
+            //connection.close();
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet InsertToDatabaseServletDemo</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println(str1);
+            out.println(x);
             out.println("<h1>Servlet InsertToDatabaseServletDemo at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
