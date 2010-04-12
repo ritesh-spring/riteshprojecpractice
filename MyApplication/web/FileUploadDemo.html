@@ -9,10 +9,13 @@ and open the template in the editor.
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body>
-      <form method="post" action="FileUploadDemo">
-          What is your Name<input type="text" name="yourname">
-          Which File you want to upload<input type="file" name="fname">
-          <input type="submit" value="UPLOAD">
+      <form method="post" action="UploadUsingOreilly">
+          <table>
+              <tr align="left"><td align="right">What is your Name</td><td><input type="text" name="yourname"></td></tr>
+              <tr align="left"><td align="right">Which File you want to upload</td><td><input type="file" name="fname"></td></tr>
+          </table>
+          <input type="submit" value="UPLOAD" name="fload">
+          <input type="reset" value="RESET" name="rset">
       </form>
   </body>
 </html>

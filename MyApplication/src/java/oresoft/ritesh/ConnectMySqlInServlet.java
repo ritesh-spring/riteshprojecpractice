@@ -64,7 +64,7 @@ public class ConnectMySqlInServlet extends HttpServlet {
                 out.println("<td>"+str1+"</td>");
                 String str2=rs.getString(3);
                 out.println("<td>"+str2+"</td>");
-                String str3=rs.getString(4);
+                Float str3=rs.getFloat(4);
                 out.println("<td>"+str3+"</td></font></tr>");
             }
            //out.println("<h1>Servlet ConnectMySqlInServlet at " + request.getContextPath () + "</h1>");

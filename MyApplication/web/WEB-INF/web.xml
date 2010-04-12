@@ -48,6 +48,10 @@
         <servlet-name>InsertToDatabaseServletDemo</servlet-name>
         <servlet-class>oresoft.ritesh.InsertToDatabaseServletDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadUsingOreilly</servlet-name>
+        <servlet-class>oresoft.ritesh.UploadUsingOreilly</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FileUploadDemo</servlet-name>
         <url-pattern>/FileUploadDemo</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>InsertToDatabaseServletDemo</servlet-name>
         <url-pattern>/InsertToDatabaseServletDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadUsingOreilly</servlet-name>
+        <url-pattern>/UploadUsingOreilly</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
